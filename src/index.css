@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=TT+Norms+Pro:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,26 +6,26 @@
 
 @layer base {
   :root {
-    --background: 240 35% 10%;
+    --background: 210 60% 8%;
     --foreground: 0 0% 100%;
-    --card: 240 20% 7%;
+    --card: 210 50% 12%;
     --card-foreground: 0 0% 100%;
-    --popover: 240 20% 7%;
+    --popover: 210 50% 12%;
     --popover-foreground: 0 0% 100%;
-    --primary: 238 100% 34%;
+    --primary: 162 100% 39%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 10% 15%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 240 10% 15%;
-    --muted-foreground: 0 0% 60%;
-    --accent: 238 100% 34%;
+    --secondary: 43 100% 51%;
+    --secondary-foreground: 210 60% 8%;
+    --muted: 210 40% 20%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 162 100% 39%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 240 10% 20%;
-    --input: 240 10% 15%;
-    --ring: 238 100% 34%;
-    --radius: 0.5rem;
+    --border: 210 40% 20%;
+    --input: 210 40% 20%;
+    --ring: 162 100% 39%;
+    --radius: 0.75rem;
   }
 }
 
@@ -35,13 +35,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family:
-      "TT Norms Pro",
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Arial,
-      sans-serif;
+    font-family: "Inter", sans-serif;
   }
   h1,
   h2,
@@ -49,33 +43,23 @@
   h4,
   h5,
   h6 {
-    font-family: "TT Norms Pro", Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
 }
 
 @layer utilities {
-  .animate-fade-in {
-    animation: fade-in 0.6s ease-out forwards;
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
   }
 
-  @keyframes fade-in {
+  @keyframes fade-in-up {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  .hover-scale {
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
-  }
-
-  .hover-scale:hover {
-    transform: scale(1.02);
   }
 }
